@@ -1,0 +1,1 @@
+root=PARTUUID=45395152-02 rootfstype=ext4 rootwait fsck.repair=yes net.ifnames=0 logo.nologo console=tty1 quiet splash vt.global_cursor_default=0
