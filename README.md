@@ -60,3 +60,29 @@ Stecke die Karte in den Pi und schalte den Strom ein. DietPi installiert automat
 ```bash
 ssh root@<IP-DEINES-PI>
 # Standard-Passwort: dietpi
+```
+
+### 3. Abhängigkeiten installieren
+
+Führe nach dem ersten Login folgenden Befehl auf dem Pi aus:
+
+```bash
+sudo apt update
+sudo apt install -y python3-pyqt5 python3-pyqt5.qtwebengine python3-pip libatlas-base-dev
+sudo pip3 install rpi-ws281x python-mpd2
+```
+
+---
+
+## Autostart einrichten (Kiosk-Modus)
+
+Erstelle auf dem Raspberry Pi die Datei `/etc/xdg/lxsession/LXDE/autostart`:
+
+```text
+@xset s off
+@xset -dpms
+@xset s noblank
+@python3 /root/holz-wecker-pi/src/main.py
+```
+
+Beim Starten von DietPi wird die PyQt5-Oberfläche nun automatisch im Vollbild auf dem AMOLED-Display gestartet.
