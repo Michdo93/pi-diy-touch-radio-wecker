@@ -1,0 +1,31 @@
+# Raspberry Pi Zero 2 WH Konfiguration für Holz-Wecker
+
+#-------Display (Waveshare 5.5" AMOLED)-------
+hdmi_blanking=1
+disable_overscan=1
+max_framebuffer_height=1920
+hdmi_group=2
+hdmi_mode=87
+hdmi_timings=1080 1 26 4 50 1920 1 8 2 6 0 0 0 60 0 135580000 3
+display_rotate=1
+
+#-------GPU Speicher-------
+gpu_mem_256=64
+gpu_mem_512=128
+
+#-------Boot-Optimierung-------
+disable_splash=1
+
+#-------Sound (HiFiBerry MiniAmp)-------
+dtparam=audio=off
+dtoverlay=hifiberry-dac
+
+#-------Schnittstellen-------
+dtparam=spi=on
+dtparam=i2c_arm=on
+enable_uart=0
+
+#-------System-------
+temp_limit=65
+initial_turbo=20
+arm_64bit=1
