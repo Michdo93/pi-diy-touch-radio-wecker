@@ -33,7 +33,7 @@ Statt fragiler Tastatur-Stabilisatoren nutzt die große Holz-Snoozetaste das bew
 
 Die Stromverteilung erfolgt zentral über zwei Wago-Klemmen (5V und GND), um Spannungsabfälle zu vermeiden.
 
-![Schaltplan](assets/schaltplan.png)
+![Schaltplan](assets/schaltplan.jpeg)
 
 ### Wago-Verteilung (Power-Zentrale)
 * **Wago (+) 5V:** Netzteil (+) $\rightarrow$ **1000 µF Elko (+)** $\rightarrow$ Pi Pin 2, AMOLED-Display (5V), Qi-Lader (+), WS2812B (+), 74HCT125 Pin 14 (VCC).
